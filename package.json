@@ -1,0 +1,25 @@
+{
+  "name": "cypress-gha-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peng-zhou/cypress-gha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peng-zhou/cypress-gha/issues"
+  },
+  "homepage": "https://github.com/peng-zhou/cypress-gha#readme",
+  "devDependencies": {
+    "cypress": "^13.3.3",
+    "prettier": "^3.0.3"
+  }
+}
