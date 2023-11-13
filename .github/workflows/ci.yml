@@ -4,9 +4,11 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     strategy:
-      fail-fast: false # https://github.com/cypress-io/github-action/issues/48
+      # don't fail the entire matrix on failure
+      fail-fast: false
       matrix:
-        containers: [1, 2] # Uses 2 parallel instances
+        # run copies of the current job in parallel
+        containers: [1, 2, 3, 4, 5]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -14,8 +16,6 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        record: true
-        parallel: true
       - name: Run Super-Linter
         uses: super-linter/super-linter@v5
         env:
